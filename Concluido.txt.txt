@@ -1,5 +1,0 @@
-Adicionar placar
-Melhorar o css
-Adicionar IA
-Corrigir o erro de dar velha sempre que o jogo acaba
-Fazer o jogo responsivo
