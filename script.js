@@ -7,6 +7,7 @@ let message = document.querySelector("#mensagem");
 let textMessage = document.querySelector("#mensagem p")
 let textoTurno = document.querySelector("h2");
 let segundoJogador;
+let vitoria = false;
 
 //contador de jogadas
 let jogadasP1 = 0;
@@ -21,6 +22,8 @@ caixas.forEach(function(box){
 	box.addEventListener("click", function(){
 		//checando o turno 
 		let turno = checkTurn(jogadasP1,jogadasP2);
+
+		vitoria = false;
 
 		//verifica se ja tem x ou bola
 		if(this.childNodes.length == 0){
@@ -78,9 +81,11 @@ function verificarLinha(n1,n2,n3,arrBox){
 
 
 		if (n1Child == 'x' && n2Child == 'x' && n3Child == 'x') {
+			vitoria = true;
 			mensagemDeVitoria("x")
 		}else
 		if(n1Child == 'o' && n2Child == 'o' && n3Child == 'o') {
+			vitoria = true;
 			mensagemDeVitoria("o")
 		}
 	}
@@ -88,9 +93,9 @@ function verificarLinha(n1,n2,n3,arrBox){
 	
 	arrBox.forEach(function(element){if(element.childNodes[0] != undefined){counter++;}});
 
-	if(counter == 9){
-		mensagemDeVitoria("v")
-		message.classList.remove("hide")
+	if(counter == 9 && vitoria == false){
+		mensagemDeVitoria("v");
+		message.classList.remove("hide");
 	}
 	
 }
@@ -152,6 +157,7 @@ function removeXO(){
 	textoTurno.textContent ="Vez do X";
 	textoTurno.classList.remove("corO");
 	textoTurno.classList.add("corX");
+	vitoria = false;
 }
 
 function atualizarPlacar(vencedor){
