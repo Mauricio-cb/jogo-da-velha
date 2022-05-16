@@ -8,7 +8,6 @@ let message = document.querySelector("#mensagem");
 let textMessage = document.querySelector("#mensagem p")
 let textoTurno = document.querySelector("h2");
 let segundoJogador;
-let vitoria = false;
 
 //contador de jogadas
 let jogadasP1 = 0;
@@ -24,8 +23,6 @@ caixas.forEach(function(box){
 		//checando o turno 
 		let turno = checkTurn(jogadasP1,jogadasP2);
 
-		vitoria = false;
-
 		//verifica se ja tem x ou bola
 		if(this.childNodes.length == 0){
 			let cloneTurno = turno.cloneNode(true);
@@ -39,11 +36,11 @@ caixas.forEach(function(box){
 				textoTurno.textContent ="Vez do O";
 				jogadasP1++;
 
-				// if(segundoJogador == 'ai-player'){
-				// 	// jogadaIa();
-				// 	jogadasP2++;
+				if(segundoJogador == 'ai-player'){
+					jogadaIa();
+					jogadasP2++;
 					
-				// }
+				}
 			
 			}else if(jogadasP1 > jogadasP2){
 				jogadasP2++;

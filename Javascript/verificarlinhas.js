@@ -1,6 +1,6 @@
 //Verifica a linha para ver se alguem ganhou
 function verificarLinha(n1,n2,n3,arrBox){
-
+	let vitoria = false;
 	if(n1.childNodes.length > 0 && n2.childNodes.length > 0 && n3.childNodes.length > 0){
 		let n1Child = n1.childNodes[0].className;
 		let n2Child = n2.childNodes[0].className;
@@ -10,6 +10,7 @@ function verificarLinha(n1,n2,n3,arrBox){
 		if (n1Child == 'x' && n2Child == 'x' && n3Child == 'x') {
 			vitoria = true;
 			mensagemDeVitoria("x")
+
 		}else
 		if(n1Child == 'o' && n2Child == 'o' && n3Child == 'o') {
 			vitoria = true;
@@ -20,7 +21,7 @@ function verificarLinha(n1,n2,n3,arrBox){
 	
 	arrBox.forEach(function(element){if(element.childNodes[0] != undefined){counter++;}});
 
-	if(counter == 9 && vitoria == false){
+	if(counter == 9 && vitoria == !false){
 		mensagemDeVitoria("v");
 		message.classList.remove("hide");
 	}
