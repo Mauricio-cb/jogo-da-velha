@@ -81,7 +81,7 @@ h1{
 }
 
 .hide{
-	display: none;
+	display: none !important;
 }
 .visible{
 	display: block;
@@ -126,17 +126,6 @@ h1{
 	padding: 20px;
 }
 
-
-/*Classes Modificadoras*/
-
-.corX{
-	color: #cf1500;
-}
-
-
-.corO{
-	color: #6f95ff;
-}
 
 @media (max-width: 600px){ 
 	h1{

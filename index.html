@@ -3,13 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="Css/styles.css">
+	<link rel="stylesheet" type="text/css" href="Css/modificadores.css">
 	<title>Jogo da velha</title>
 </head>
 <body>
 	<h1>Jogo da velha</h1>
 	<h2 id="texto-turno"> Vez do X</h2>
-	<div id="caixa">
+	<div class="hide" id="caixa">
 		<div class="box" id="box-1"></div>
 		<div class="box" id="box-2"></div>
 		<div class="box" id="box-3"></div>
@@ -37,8 +38,13 @@
 	<div id="mensagem" class="hide"><p>asd</p></div>
 	<div id="botao-container">
 		<button id="2-player">2 Jogadores</button>
-		<button id="ai-player">Contra IA</button>
+		<button id="ai-player">Contra IA em construção</button>
 	</div>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="Javascript/principal.js"></script>
+	<script type="text/javascript" src="Javascript/mensagem.js"></script>
+	<script type="text/javascript" src="Javascript/verificarlinhas.js"></script>
+	<script type="text/javascript" src="Javascript/placar.js"></script>
+	<script type="text/javascript" src="Javascript/checagem.js"></script>
+	<script type="text/javascript"src="Javascript/removerElementos.js"></script>
 </body>
 </html>
