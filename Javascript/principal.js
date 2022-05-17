@@ -39,7 +39,11 @@ caixas.forEach(function(box){
 				if(segundoJogador == 'ai-player'){
 					jogadaIa();
 					jogadasP2++;
-					
+
+					textoTurno.classList.remove("corO");
+					textoTurno.classList.add("corX");
+					textoTurno.textContent ="Vez do X";
+
 				}
 			
 			}else if(jogadasP1 > jogadasP2){
