@@ -8,5 +8,4 @@ function removeXO(){
 	textoTurno.textContent ="Vez do X";
 	textoTurno.classList.remove("corO");
 	textoTurno.classList.add("corX");
-	vitoria = false;
 }

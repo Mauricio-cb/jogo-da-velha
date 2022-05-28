@@ -78,7 +78,6 @@ botoes.forEach(function(botao){
 				containerCaixa.classList.remove("hide");
 			},1000)
 		});
-		console.log("Esta aqui");
 	});
 })
 
